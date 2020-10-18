@@ -48,24 +48,19 @@ html, body {
     background-color: var(--text-color);
 }
 
-#clear-button {
+.clear-button {
     display: inline-block;
     padding: 0.35em 1.2em;
     border: 0.01em solid var(--text-color);
-    margin: 10px auto;
     border-radius: 0.1em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
     color: #000;
     text-align: center;
-    transition: all 0.4s;
     cursor: pointer;
     visibility: hidden;
 }
 
-#clear-button:hover {
+.clear-button:hover {
+    transform: scale(1.2);
     color: #000000;
     background-color: #FFFFFF;
 }
@@ -75,21 +70,16 @@ html, body {
 }
 
 a.button {
-    display: inline-block;
     padding: 0.35em 1.2em;
     border: 0.1em solid var(--text-color);
     margin: 10px auto;
-    border-radius: 0.1em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--text-color);
     text-align: center;
-    transition: all 0.4s;
+    transition: all 0.1s;
 }
 
-a.button:hover {
+a.button:hover, a.button:focus {
     color: var(--bg-color);
     background-color: var(--text-color);
 }

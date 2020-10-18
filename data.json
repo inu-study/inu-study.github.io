@@ -8,25 +8,25 @@
     {
         "title": "Systems Analysis and Design",
         "titleAr": "تصميم وتحليل النظم",
-        "keywords": "Systems Analysis Design عتوم تصميم تحليل النظم نظم",
+        "keywords": "Systems Analysis Design تصميم تحليل النظم نظم",
         "link": "/documents/sys_analysis.pdf"
     },
     {
         "title": "Calculus I",
         "titleAr": "تفاضل وتكامل 1",
-        "keywords": "Calculus كالكولاس تفاضل تكامل عمورة",
+        "keywords": "Calculus كالك كالكولاس تفاضل تكامل",
         "link": "/documents/calculus1.pdf"
     },
     {
         "title": "Algorithms",
         "titleAr": "الخوارزميات",
-        "keywords": "Algorithms العتوم الخوارزميات خوارزميات عتوم",
+        "keywords": "Algorithms الخوارزميات خوارزميات",
         "link": "/documents/algorithms.pdf"
     },
     {
         "title": "Abstract Algebra 1",
         "titleAr": "جبر مجرد 1",
-        "keywords": "جبر مجرد الحسبان تجريدي الجبر الحديث ",
+        "keywords": "جبر مجرد تجريدي الجبر الحديث ",
         "link": "/documents/abstract_algebra1.pdf"
     },
     {
@@ -38,13 +38,13 @@
     {
         "title": "Compiler Construction",
         "titleAr": "بناء المترجمات",
-        "keywords": "بناء المترجمات مترجمات كومبايلر العتوم عتوم",
+        "keywords": "بناء المترجمات مترجمات كومبايلر",
         "link": "/documents/compilers.pdf"
     },
     {
         "title": "Calculus 2",
         "titleAr": "تفاضل وتكامل 2",
-        "keywords": "كالكولاس تفاضل تكامل عمورة",
+        "keywords": "كالك 2 كالكولاس تفاضل تكامل",
         "link": "/documents/calculus2.pdf"
     },
     {
@@ -68,7 +68,7 @@
     {
         "title": "Databases",
         "titleAr": "قواعد البيانات",
-        "keywords": "قواعد بيانات",
+        "keywords": "قواعد بيانات قاعدة",
         "link": "/documents/databases.pdf"
     },
     {
@@ -80,25 +80,25 @@
     {
         "title": "Complex Analysis 1",
         "titleAr": "تحليل مركب 1",
-        "keywords": "تحليل مركب المعقد",
+        "keywords": "تحليل مركب معقد",
         "link": "/documents/complex_analysis1.pdf"
     },
     {
         "title": "Information and Network Security",
         "titleAr": "أمن وحماية المعلومات والشبكات",
-        "keywords": "أمن وحماية المعلومات والشبكات",
+        "keywords": "أمن حماية معلومات",
         "link": "/documents/crypto.pdf"
     },
     {
         "title": "E-commerce",
         "titleAr": "التجارة الالكترونية",
-        "keywords": "التجاربة الالكترونية تجارة ",
+        "keywords": "التجاربة الالكترونية تجارة",
         "link": "/documents/ecommerce.pdf"
     },
     {
         "title": "Linear Algebra 1",
         "titleAr": "الجبر الخطي 1 ",
-        "keywords": "جبر خطي الحسبان",
+        "keywords": "جبر خطي",
         "link": "/documents/linear_algebra1.pdf"
     },
     {
@@ -108,7 +108,7 @@
         "link": "/documents/networking1.pdf"
     },
     {
-        "title": "Statistics & Probability",
+        "title": "Statistics and Probability",
         "titleAr": "الإحصاء والاحتمالات",
         "keywords": "احصاء احتمالات",
         "link": "/documents/statistics_probability.pdf"
