@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Discrete Math",
+        "titleAr": "الرياضيات المنفصلة",
+        "keywords": "Discrete Math Mathematics رياضيات منفصلة متقطعة",
+        "link": "/documents/discrete.pdf"
+    },
+    {
+        "title": "Systems Analysis and Design",
+        "titleAr": "تصميم وتحليل النظم",
+        "keywords": "Systems Analysis Design عتوم تصميم تحليل النظم نظم",
+        "link": "/documents/sys-analysis.pdf"
+    },
+    {
+        "title": "Calculus I",
+        "titleAr": "تفاضل وتكامل 1",
+        "keywords": "Calculus كالكولاس تفاضل تكامل عمورة",
+        "link": "/documents/calculus1.pdf"
+    },
+    {
+        "title": "Algorithms",
+        "titleAr": "الخوارزميات",
+        "keywords": "Algorithms العتوم الخوارزميات خوارزميات عتوم",
+        "link": "/documents/algorithms.pdf"
+    }
+]
