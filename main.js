@@ -40,7 +40,9 @@ const resetLink = () =>
 
 function findMatches(word) {
     const regex = new RegExp(word, 'gi');
-    return docs.filter(doc => doc.keywords.match(regex) || doc.title.match(regex));
+    return docs.filter(doc => doc.keywords.match(regex)
+        || doc.title.match(regex)
+        || doc.titleAr.match(regex));
 }
 
 function changeLanguage() {
@@ -99,27 +101,6 @@ function defaultSelect() {
 }
 
 
-selectDoc.addEventListener('change', updateLink);
-search.addEventListener('input', showMatches);
-langBtn.addEventListener('click', changeLanguage);
-
-clearBtn.addEventListener('click', () => {
-    search.value = '';
-    showMatches();
-
-});
-
-
-hide(clearBtn);
-
-fetch('data.json')
-    .then(response => response.json())
-    .then(json => {
-        docs.push(...Array.from(json))
-        defaultSelect();
-        updateLink();
-    });
-
 function colorMode(mode) {
     let [bgColor, textColor] = '';
     if (mode === 'dark') {
@@ -133,12 +114,36 @@ function colorMode(mode) {
     document.documentElement.style.setProperty(`--text-color`, textColor);
 }
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+
+
+fetch('data.json')
+    .then(response => response.json())
+    .then(json => {
+        docs.push(...Array.from(json))
+        defaultSelect();
+        updateLink();
+    });
+
+
+selectDoc.addEventListener('change', updateLink);
+search.addEventListener('input', showMatches);
+langBtn.addEventListener('click', changeLanguage);
+
+clearBtn.addEventListener('click', () => {
+    search.value = '';
+    showMatches();
+
+});
+
+
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
     colorMode('light');
 
-}
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
     const newColorScheme = e.matches ? "dark" : "light";
     colorMode(newColorScheme);
 });
+
+hide(clearBtn);
