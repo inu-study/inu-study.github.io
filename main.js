@@ -26,22 +26,35 @@ function createOptionWithTitle(value, title) {
     return newOption;
 }
 
+function getTitleLink(t) {
+    return t ? docs.filter(doc => {
+        return doc['title' + lang] === t;
+    })[0]['link'] : '';
+}
+
 
 function updateLink() {
     /*
     gets current selected item link, changes download href to link
     */
-    const selectedTitle = selectDoc.children[selectDoc.value].innerHTML;
-    const item = docs.filter(doc => {
-        return doc['title' + lang] === selectedTitle;
-    })[0];
-    downloadBtn.href = item['link'];
+
+    with (downloadBtn) {
+        href = getTitleLink(selectDoc.children[selectDoc.value].innerHTML);
+        setAttribute('download', '');
+        setAttribute('target', '_blank');
+    }
 
 }
 
 // removes link
-const resetLink = () =>
-    downloadBtn.href = '';
+const resetLink = () => {
+    with (downloadBtn) {
+        href = '#';
+        removeAttribute('download');
+        removeAttribute('target');
+
+    }
+}
 
 
 function findMatches(word) {
@@ -87,6 +100,7 @@ function showMatches() {
         hide(clearBtn);
         hide(noMatches);
         defaultSelect();
+        updateLink();
         return;
     }
 
@@ -103,23 +117,28 @@ function showMatches() {
     hide(noMatches);
 
     // clear select element, and add matches instead
-    selectDoc.innerHTML = '';
-    matches.forEach(doc =>
-        selectDoc.appendChild(createOptionWithTitle(selectDoc.children.length, doc['title' + lang]))
-    );
+    addItemsToSelect(matches);
+
     // update download link to match the best result
     updateLink();
 
 }
 
-// handles default selection, don't know why honestly
-function defaultSelect() {
+function addItemsToSelect(items) {
+    /*
+    clears select HTML, adds items as options
+    */
     selectDoc.innerHTML = '';
-    docs.forEach(doc =>
+    items.forEach(doc =>
         selectDoc.appendChild(createOptionWithTitle(selectDoc.children.length, doc['title' + lang]))
     );
-
 }
+
+
+// handles default selection, don't know why honestly
+const defaultSelect = () =>
+    addItemsToSelect(docs);
+
 
 
 function colorMode(mode) {
@@ -135,8 +154,10 @@ function colorMode(mode) {
         textColor = '#2d3436';
     }
     // set CSS variables
-    document.documentElement.style.setProperty(`--bg-color`, bgColor);
-    document.documentElement.style.setProperty(`--text-color`, textColor);
+    with (document.documentElement.style) {
+        setProperty(`--bg-color`, bgColor);
+        setProperty(`--text-color`, textColor);
+    }
 }
 
 
@@ -153,6 +174,9 @@ fetch('data.json')
 selectDoc.addEventListener('change', updateLink);
 search.addEventListener('input', showMatches);
 langBtn.addEventListener('click', changeLanguage);
+
+
+
 
 // listen for clear/cancel button
 clearBtn.addEventListener('click', () => {
