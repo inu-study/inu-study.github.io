@@ -112,5 +112,17 @@
         "titleAr": "الإحصاء والاحتمالات",
         "keywords": "احصاء احتمالات",
         "link": "/documents/statistics_probability.pdf"
+    },
+        {
+        "title": "Database Management Systems",
+        "titleAr": "نظم إدارة قواعد البيانات",
+        "keywords": "بيانات ادارة نظم قواعد البيانات ",
+        "link": "/documents/databasems.pdf"
+    },
+        {
+        "title": "Data Mining",
+        "titleAr": "تنقيب البيانات",
+        "keywords": "تنقيب البيانات بيانات",
+        "link": "/documents/data_mining.pdf"
     }
 ]
